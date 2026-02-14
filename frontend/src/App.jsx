@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -17,7 +18,7 @@ function App() {
   return (
     <div>
       <h1>Monitor</h1>
-      <p>{message}</p>
+      <p key={message} className="received">{message}</p>
     </div>
   );
 }
