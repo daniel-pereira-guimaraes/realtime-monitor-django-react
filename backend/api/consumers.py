@@ -5,7 +5,7 @@ from channels.generic.websocket import AsyncWebsocketConsumer
 class MonitorConsumer(AsyncWebsocketConsumer):
     
     async def connect(self):
-        self.grou_name = 'monitor'
+        self.group_name = 'monitor'
         await self.channel_layer.group_add(self.group_name, self.channel_name)
         await self.accept()
 
