@@ -10,7 +10,7 @@ class MonitorConsumer(AsyncWebsocketConsumer):
         await self.accept()
 
     async def disconnect(self, code):
-        await self.channel_layer.group_discard(self.grou_name, self.channel_name)
+        await self.channel_layer.group_discard(self.group_name, self.channel_name)
 
     async def broadcast_message(self, event):
         await self.send(text_data=json.dumps({
